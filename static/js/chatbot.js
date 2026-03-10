@@ -1,3 +1,15 @@
+function toggleChat(){
+
+let chat = document.getElementById("chatbot-window");
+
+if(chat.style.display === "flex"){
+chat.style.display = "none";
+}else{
+chat.style.display = "flex";
+}
+
+}
+
 function sendMessage(){
 
 let input = document.getElementById("chat-input");
