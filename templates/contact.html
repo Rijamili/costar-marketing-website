@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="contact-section">
+
+<h1 class="contact-title">Contact Us</h1>
+
+<div class="contact-container">
+
+<form method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="text" name="phone" placeholder="Phone Number">
+
+<textarea name="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="contact-info">
+
+<h3>Our Office</h3>
+
+<p>AL NOOR 3 BUILDING 403<br>
+AL MANKHOOL BURJUMAN<br>
+Dubai, UAE</p>
+
+<p><strong>Email:</strong><br>
+shibilims007@gmail.com</p>
+
+<p><strong>Phone:</strong><br>
++971525033272</p>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="books">
+
+<h1>Digital Books</h1>
+
+<p>Explore our digital marketing and business strategy books.</p>
+
+<div class="book-container">
+
+{% for book in books %}
+
+<div class="book-card">
+
+<h3>{{book.title}}</h3>
+
+<p>Price: ${{book.price}}</p>
+
+<button>Buy Now</button>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+{% endblock %}

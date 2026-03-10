@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="dashboard">
+
+<h1>Admin Dashboard</h1>
+
+<a href="/logout" class="logout-btn">Logout</a>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>{{ leads|length }}</h2>
+<p>Total Leads</p>
+</div>
+
+</div>
+
+<h2 class="lead-title">Client Inquiries</h2>
+
+<table class="lead-table">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Message</th>
+<th>Action</th>
+</tr>
+
+{% for lead in leads %}
+
+<tr>
+<td>{{ lead.name }}</td>
+<td>{{ lead.email }}</td>
+<td>{{ lead.phone }}</td>
+<td>{{ lead.message }}</td>
+<td>
+<a href="/delete/{{ lead.id }}" class="delete-btn">Delete</a>
+</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</section>
+
+{% endblock %}
